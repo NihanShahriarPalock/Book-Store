@@ -1,21 +1,40 @@
+import {NavLink } from "react-router-dom";
 
-const link = (
+const allLink = (
   <>
-    <li>
-      <a>Item 1</a>
-    </li>
-    <li>
-      <a>Item 2</a>
-    </li>
-    <li>
-      <a>Item 3</a>
-    </li>
+    <NavLink
+      to='/'
+      className={({ isActive }) =>
+        isActive
+          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg  px-5 py-3"
+      }>
+      Home
+    </NavLink>
+    <NavLink
+      to='/ListedBooks'
+      className={({ isActive }) =>
+        isActive
+          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 items-center justify-center rounded-lg   px-5 py-3"
+      }>
+      Listed Books
+    </NavLink>
+    <NavLink
+      to='/PagesToRead'
+      className={({ isActive }) =>
+        isActive
+          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg px-5 py-3"
+      }>
+      Pages To Read
+    </NavLink>
   </>
 );
 
 const Navbar = () => {
     return (
-      <div className='navbar bg-base-100'>
+      <div className='navbar bg-white my-10'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -35,20 +54,24 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'>
-              {link}
+              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52'>
+              {allLink}
             </ul>
           </div>
-          <a className='text-3xl font-bold text-[#131313] '>Book Library</a>
+          <button>
+            <NavLink to='/' className='text-3xl font-bold text-[#131313] '>
+              Book Library
+            </NavLink>
+          </button>
         </div>
         <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal px-1'>{link}</ul>
+          <ul className='menu menu-horizontal px-1'>{allLink}</ul>
         </div>
         <div className='navbar-end'>
           <a className='btn bg-[#23BE0A] rounded-lg text-white font-semibold py-4 px-6 mr-4'>
             Sign In
           </a>
-          <a className='btn bg-[#59C6D2] rounded-lg text-white font-semibold py-4 px-6'>
+          <a className='btn bg-[#59C6D2] rounded-lg text-white font-semibold py-4 px-6 mr-0'>
             Sign Up
           </a>
         </div>
