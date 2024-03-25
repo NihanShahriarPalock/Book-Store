@@ -6,8 +6,8 @@ const allLink = (
       to='/'
       className={({ isActive }) =>
         isActive
-          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
-          : "text-[#131313CC] text-lg mr-4 rounded-lg  px-5 py-3"
+          ? "text-lg mr-4 text-[#23BE0A] font-semibold rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg font-normal  px-5 py-3"
       }>
       Home
     </NavLink>
@@ -15,8 +15,8 @@ const allLink = (
       to='/ListedBooks'
       className={({ isActive }) =>
         isActive
-          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
-          : "text-[#131313CC] text-lg mr-4 items-center justify-center rounded-lg   px-5 py-3"
+          ? "text-lg mr-4 text-[#23BE0A] font-semibold rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg font-normal  px-5 py-3"
       }>
       Listed Books
     </NavLink>
@@ -24,8 +24,8 @@ const allLink = (
       to='/PagesToRead'
       className={({ isActive }) =>
         isActive
-          ? "text-lg mr-4 text-[#23BE0A] rounded-lg border border-[#23BE0A] px-5 py-3"
-          : "text-[#131313CC] text-lg mr-4 rounded-lg px-5 py-3"
+          ? "text-lg mr-4 text-[#23BE0A] font-semibold  rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg font-normal px-5 py-3"
       }>
       Pages To Read
     </NavLink>
@@ -34,7 +34,7 @@ const allLink = (
 
 const Navbar = () => {
     return (
-      <div className='navbar bg-white my-10'>
+      <div className='navbar bg-white '>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>

@@ -4,12 +4,12 @@ import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
     return (
-        <div>
-            <div className="h-16">
-                <Navbar></Navbar>
-            </div>
-            <Outlet></Outlet>
+      <div className="mx-2 lg:mx-28">
+        <div className='h-16 my-4 lg:my-10'>
+          <Navbar></Navbar>
         </div>
+        <Outlet></Outlet>
+      </div>
     );
 };
 
