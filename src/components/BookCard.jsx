@@ -3,36 +3,25 @@ import { Link } from "react-router-dom";
 
 const BookCard = ({book}) => {
 const {
-  bookId,
-  image,
-  bookName,
-  author,
-  review,
-  totalPages,
-  rating,
-  category,
-  tags,
-  publisher,
-  yearOfPublishing,
-} = book;
+  bookId,  image,  bookName,  author,  review,  totalPages, rating,  category, tags, publisher,  yearOfPublishing } = book;
 
     return (
       <div>
         <Link to={`/book/${bookId}`}>
           {" "}
-          <div className='flex flex-col  p-6 border border-red-600 space-y-6 overflow-hidden shadow-md bg-white rounded-2xl text-gray-800'>
+          <div className='flex flex-col  p-6 border-2  border-[#13131326] space-y-6 overflow-hidden shadow-md bg-white rounded-2xl transition hover:scale-105 hover:no-underline focus:no-underline hover:border-[#23BE0A]  '>
             <div className='mb-6'>
               <img
                 src={image}
                 alt=''
-                className='w-full  max-h-[435px]  p-10 rounded-2xl bg-gray-500'
+                className='w-full  max-h-[435px]  p-10 rounded-2xl bg-[#13131326]'
               />
             </div>
             <div className='bg-white flex gap-3'>
-              <p className='text-[#23BE0A] w-max rounded-3xl font-medium text-base px-4 py-2 bg-yellow-500'>
+              <p className='text-[#23BE0A] w-max rounded-3xl font-medium text-base px-4 py-2 bg-[#23BE0A0D]'>
                 {tags[0]}
               </p>
-              <p className='text-[#23BE0A] w-max rounded-3xl font-medium text-base px-4 py-2 bg-yellow-500'>
+              <p className='text-[#23BE0A] w-max rounded-3xl font-medium text-base px-4 py-2 bg-[#23BE0A0D]'>
                 {tags[1]}
               </p>
             </div>
@@ -66,7 +55,6 @@ const {
                       strokeLinejoin='round'
                     />
                   </svg>
-                 
                 </div>
               </div>
             </div>
