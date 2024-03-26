@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const BookCard = ({book}) => {
 const {
-  bookId,  image,  bookName,  author,  review,  totalPages, rating,  category, tags, publisher,  yearOfPublishing } = book;
+  bookId,  image,  bookName,  author,   rating,  category, tags } = book;
 
     return (
       <div>
