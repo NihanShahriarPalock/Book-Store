@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveBook } from "../utility/localStorage";
+import { saveBook, saveWishBook } from "../utility/localStorage";
 
 const SingleBookDetails = () => {
   const books = useLoaderData();
@@ -11,6 +11,9 @@ const SingleBookDetails = () => {
   const handleAddRead = book =>{
     // console.log(book);
     saveBook(book);
+  }
+  const handleWishlists = book=>{
+    saveWishBook(book);
   }
 
   return (
@@ -74,10 +77,14 @@ const SingleBookDetails = () => {
             </div>
           </div>
 
-          <button onClick={()=>handleAddRead(book)} className='mr-6 mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
+          <button
+            onClick={() => handleAddRead(book)}
+            className='mr-6 mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
             Read
           </button>
-          <button className='mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
+          <button
+            onClick={() => handleWishlists(book)}
+            className='mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
             Wishlist Books
           </button>
         </div>
