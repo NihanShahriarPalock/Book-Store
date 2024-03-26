@@ -1,11 +1,17 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveBook } from "../utility/localStorage";
 
 const SingleBookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
   const IdInt = parseInt(bookId);
   const book = books.find((book) => book.bookId === IdInt);
-  console.log(book);
+  // console.log(book);
+
+  const handleAddRead = book =>{
+    console.log(book);
+    saveBook(book);
+  }
 
   return (
     <>
@@ -68,11 +74,11 @@ const SingleBookDetails = () => {
             </div>
           </div>
 
-          <button className='mr-6 mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
+          <button onClick={()=>handleAddRead(book)} className='mr-6 mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
             Read
           </button>
           <button className='mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
-            Wishlist
+            Wishlist Books
           </button>
         </div>
       </div>
