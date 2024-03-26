@@ -1,16 +1,21 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 
 const ListedBooks = () => {
+    const [tabIndex, setTabIndex] = useState(0);
     return (
-      <div >
+      <div>
         <div className='text-center font-bold text-3xl text-[#131313] border rounded-2xl bg-[#1313130D] py-8 mb-8'>
           <h2>Book</h2>
         </div>
-        <div className='flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap bg-gray-100 text-gray-800'>
+        <div className='flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap  text-gray-800'>
           <Link
-            to='./'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b border-gray-600 text-gray-600'>
+            to={``}
+            onClick={() => setTabIndex(0)}
+            className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
+              tabIndex === 0 ? "border border-b-0" : "border-b"
+            }  `}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -25,8 +30,11 @@ const ListedBooks = () => {
             <span>Read Books</span>
           </Link>
           <Link
-            to='/wishlist'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg border-gray-600 text-gray-900'>
+            to={`wishlists`}
+            onClick={() => setTabIndex(1)}
+            className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
+              tabIndex === 1 ? "border border-b-0" : "border-b"
+            }  `}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -42,6 +50,7 @@ const ListedBooks = () => {
             <span>Wishlist Books</span>
           </Link>
         </div>
+        <Outlet></Outlet>
       </div>
     );
 };

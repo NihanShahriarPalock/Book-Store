@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 // import ratings from '../assets/ratings.svg'
 
 const BookCard = ({book}) => {
@@ -63,5 +64,8 @@ const {
       </div>
     );
 };
-
+BookCard.propTypes = {
+  book: PropTypes.object.isRequired,
+ 
+};
 export default BookCard;
