@@ -10,9 +10,14 @@ const Wishlists = () => {
       setWishBooks(storeBooks);
       console.log(storeBooks);
     }, []);
+
+    if (wishBooks.length < 1) {
+      return <h1 className="font-bold text-center text-3xl mt-10">You dont add any book in your wish list</h1>;
+    }
     return (
       <div className='flex flex-col gap-6 mt-6'>
-        {wishBooks.map((book) => (
+        {wishBooks.map((book) => ( 
+          
           <a key={book.bookId}>
             <div className='bg-white rounded-2xl border-2 border-[#13131326] shadow-md p-4 flex gap-6 flex-row'>
               <div className='bg-[#1313130D] p-6 flex justify-center items-center size-[230px] rounded-2xl'>

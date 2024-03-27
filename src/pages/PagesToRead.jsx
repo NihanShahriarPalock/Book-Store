@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from "recharts";
 import PropTypes from "prop-types";
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
@@ -22,9 +30,7 @@ const TriangleBar = (props) => {
 
 const PagesToRead = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
-    // Retrieve data from local storage
     const storedData = localStorage.getItem("books");
     const parsedData = JSON.parse(storedData);
 
@@ -39,27 +45,28 @@ const PagesToRead = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-auto h-screen">
+    <div className='flex justify-center items-center  h-screen'>
       <BarChart
-        width={1000} 
-        height={500} 
+        width={1000}
+        height={500}
         data={data}
         margin={{
-          top: -5,
+          top: -10,
           right: 10,
           left: 10,
-          bottom: 0,
+          bottom: 5,
         }}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='name' />
         <YAxis />
+        <Tooltip />
         <Bar
           dataKey='uv'
           fill='#8884d8'
           shape={<TriangleBar />}
           label={{ position: "top" }}>
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+            <Cell key={`cell-${index}`} fill={colors[index % 50]} />
           ))}
         </Bar>
       </BarChart>
