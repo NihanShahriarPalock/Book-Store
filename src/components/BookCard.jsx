@@ -8,7 +8,7 @@ const {
 
     return (
       <div>
-        <Link to={`/book/${bookId}`}>
+        <Link to={`/${bookId}`}>
           {" "}
           <div className='flex flex-col  p-6 border-2  border-[#13131326] space-y-6 overflow-hidden shadow-md bg-white rounded-2xl transition hover:scale-105 hover:no-underline focus:no-underline hover:border-[#23BE0A]  '>
             <div className='mb-6'>

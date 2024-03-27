@@ -1,12 +1,14 @@
 import Navbar from "../components/Navbar";
 
-
+import ratings from '/ratings.svg'
 const Error = () => {
     return (
       <div>
+
         <div className='h-16 mt-5 mb-7 mx-2 lg:mx-28 '>
           <Navbar></Navbar>
         </div>
+        {ratings}
         {/* <h2 className='flex items-center justify-center min-h-dvh'>Error</h2> */}
         <div
           style={{

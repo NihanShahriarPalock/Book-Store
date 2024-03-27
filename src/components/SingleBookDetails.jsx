@@ -5,7 +5,7 @@ const SingleBookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
   const IdInt = parseInt(bookId);
-  const book = books.find((book) => book.bookId === IdInt);
+  const book = books.find((book) => book.bookId == IdInt);
   console.log(book);
 
   const handleAddRead = book =>{

@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import BookCard from "./BookCard";
 
-
 const AllBooks = () => {
 
     const books=useLoaderData();

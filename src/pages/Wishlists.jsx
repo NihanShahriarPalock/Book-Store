@@ -129,7 +129,7 @@ const Wishlists = () => {
                   <button className='bg-[#FFAC3326] text-[#FFAC33] px-4 py-2 rounded-3xl'>
                     Rating: <span>{book.rating}</span>
                   </button>
-                  <Link to={`/book/${book.bookId}`}>
+                  <Link to={`/${book.bookId}`}>
                     {" "}
                     <button className='bg-[#23BE0A] text-white px-4 py-2 rounded-3xl'>
                       View Details
