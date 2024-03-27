@@ -10,41 +10,17 @@ const ListedBooks = () => {
           <h2>Book</h2>
         </div>
 
-        <div className='dropdown left-[150px] lg:left-[600px] mb-16'>
-          <div tabIndex={0} role='button'>
-            <div className='flex justify-center items-center content-center max-w-fit  bg-[#23BE0A]  rounded-lg px-5 py-3'>
-              <div className='text-white text-lg font-semibold'>Sort By </div>
-              <div className='flex justify-center items-center ml-3 mt-2'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='30'
-                  height='30'
-                  viewBox='0 0 30 30'
-                  fill='none'>
-                  <path
-                    d='M19.5 8.25L12 15.75L4.5 8.25'
-                    stroke='white'
-                    strokeWidth='2.5'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <ul
-            tabIndex={0}
-            className='dropdown-content z-[1] menu  shadow bg-base-100 rounded-box w-52'>
-            <li >
-              <a>Ratings</a>
-            </li>
-            <li>
-              <a>Number of Pages</a>
-            </li>
-            <li>
-              <a>Publish Year</a>
-            </li>
-          </ul>
+  
+
+        <div className='mx-[120px] lg:mx-[550px] '>
+          <select className='select select-bordered join-item text-white  text-lg font-semibold  bg-[#23BE0A]  rounded-lg '>
+            <option className='bg-white text-gray-400'  selected>
+              Filter
+            </option>
+            <option className='bg-white text-black'>Ratings</option>
+            <option className='bg-white text-black'>Number of Pages</option>
+            <option className='bg-white text-black'>Publish Year</option>
+          </select>
         </div>
 
         <div className='flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap  text-gray-800'>

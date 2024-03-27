@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getBooks } from "../utility/localStorage";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const ReadBooks = () => {
@@ -14,7 +14,7 @@ const ReadBooks = () => {
      if (books.length < 1) {
        return (
          <h1 className='font-bold text-center text-3xl mt-10 text-red-500'>
-           You Don't Add Any Book in Your Read List
+           You Do not Add Any Book in Your Read List
          </h1>
        );
      }
