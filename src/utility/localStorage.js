@@ -14,7 +14,7 @@ export const getBooks=() =>{
 export const saveBook=book=>{
     let books = getBooks();
     const isExist = books.find(b => b.bookId == book.bookId);
-    // console.log(typeof b.id);
+    
     if(isExist){
         return toast.error("Already Added to Read List")
     }
