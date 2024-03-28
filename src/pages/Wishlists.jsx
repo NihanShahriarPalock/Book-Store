@@ -19,7 +19,7 @@ const Wishlists = () => {
         {wishBooks.map((book) => ( 
           
           <a key={book.bookId}>
-            <div className='bg-white rounded-2xl border-2 border-[#13131326] shadow-md p-4 flex gap-6 flex-row'>
+            <div className='bg-white rounded-2xl border-2 border-[#13131326] shadow-md p-4 flex gap-6 flex-col lg:flex-row'>
               <div className='bg-[#1313130D] p-6 flex justify-center items-center size-[230px] rounded-2xl'>
                 <img src={book.image} className='w-full h-full ' />
               </div>

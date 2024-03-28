@@ -8,6 +8,8 @@ import PagesToRead from "../pages/PagesToRead";
 import ReadBooks from "../pages/ReadBooks";
 import Wishlists from "../pages/Wishlists";
 import Sorting from "../components/Sorting";
+import ContactUs from "../pages/ContactUs";
+import FAQ from "../pages/FAQ";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./data.json"),
+        loader: () => fetch("data.json"),
       },
       {
         path: "/:bookId",
@@ -37,7 +39,6 @@ export const router = createBrowserRouter([
           {
             path: "wishlists",
             element: <Wishlists></Wishlists>,
-            
           },
         ],
       },
@@ -47,12 +48,17 @@ export const router = createBrowserRouter([
       },
 
       {
-        path:'/sorting',
-        element:<Sorting></Sorting>,
-      }
-
-
-
+        path: "/sorting",
+        element: <Sorting></Sorting>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/faq",
+        element: <FAQ></FAQ>,
+      },
     ],
   },
 ]);

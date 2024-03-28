@@ -6,7 +6,7 @@ const SingleBookDetails = () => {
   const { bookId } = useParams();
   const IdInt = parseInt(bookId);
   const book = books.find((book) => book.bookId == IdInt);
-  console.log(book);
+  // console.log(book);
 
   const handleAddRead = book =>{
     // console.log(book);
@@ -84,7 +84,7 @@ const SingleBookDetails = () => {
           </button>
           <button
             onClick={() => handleWishlists(book)}
-            className='mt-8 text-lg font-semibold text-[#131313] border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white transition delay-100 hover:bg-[#23BE0A]'>
+            className='mt-8 text-lg font-semibold text-white border border-[#1313134D] px-7 py-4 rounded-lg hover:text-white bg-[#50B1C9] transition delay-100 '>
             Wishlist Books
           </button>
         </div>

@@ -44,6 +44,14 @@ const PagesToRead = () => {
     }
   }, []);
 
+   if (data.length < 1) {
+     return (
+       <h1 className='font-bold text-center text-3xl mt-10 text-red-500'>
+          Add Books in Your Read List First
+       </h1>
+     );
+   }
+
   return (
     <div className='flex justify-center items-center  h-screen'>
       <BarChart

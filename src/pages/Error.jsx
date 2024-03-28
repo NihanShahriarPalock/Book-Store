@@ -3,44 +3,32 @@ import Navbar from "../components/Navbar";
 const Error = () => {
     return (
       <div>
-
         <div className='h-16 mt-5 mb-7 mx-2 lg:mx-28 '>
           <Navbar></Navbar>
         </div>
 
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-          }}>
-          <svg width='400' height='200' xmlns='http://www.w3.org/2000/svg'>
-            <style>
-              {`
-            .bounce {
-              animation: bounce 1s infinite alternate;
-            }
-
-            @keyframes bounce {
-              0% { transform: translateY(0); }
-              100% { transform: translateY(-20px); }
-            }
-          `}
-            </style>
-
-            <rect width='100%' height='100%' fill='#f0f0f0' />
-            <text
-              x='50%'
-              y='50%'
-              textAnchor='middle'
-              fontSize='48'
-              fill='#333'
-              className='bounce'>
-              404 Error
-            </text>
-          </svg>
-        </div>
+        <section className='flex items-center h-full p-16 bg-gray-50 text-gray-800'>
+          <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
+            <div className='max-w-md text-center'>
+              <h2 className='mb-8 font-extrabold text-9xl text-gray-400'>
+                <span className='sr-only'>Error</span>404
+              </h2>
+              <p className='text-2xl font-semibold md:text-3xl'>
+                Sorry, we could not find this page.
+              </p>
+              <p className='mt-4 mb-8 text-gray-600'>
+                But do not worry, you can find  other things on our
+                homepage
+              </p>
+              <a
+                rel='noopener noreferrer'
+                href='#'
+                className='px-8 py-3 font-semibold rounded bg-default-600 text-gray-50'>
+                Back to homepage
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     );
 };

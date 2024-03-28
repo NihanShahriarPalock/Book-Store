@@ -29,6 +29,24 @@ const allLink = (
       }>
       Pages To Read
     </NavLink>
+    <NavLink
+      to='/faq'
+      className={({ isActive }) =>
+        isActive
+          ? "text-lg mr-4 text-[#23BE0A] font-semibold  rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg font-normal px-5 py-3"
+      }>
+      FAQ
+    </NavLink>
+    <NavLink
+      to='/Contact'
+      className={({ isActive }) =>
+        isActive
+          ? "text-lg mr-4 text-[#23BE0A] font-semibold  rounded-lg border border-[#23BE0A] px-5 py-3"
+          : "text-[#131313CC] text-lg mr-4 rounded-lg font-normal px-5 py-3"
+      }>
+      Contact Us
+    </NavLink>
   </>
 );
 
