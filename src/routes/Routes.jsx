@@ -7,7 +7,6 @@ import ListedBooks from "../pages/ListedBooks";
 import PagesToRead from "../pages/PagesToRead";
 import ReadBooks from "../pages/ReadBooks";
 import Wishlists from "../pages/Wishlists";
-import Sorting from "../components/Sorting";
 import ContactUs from "../pages/ContactUs";
 import FAQ from "../pages/FAQ";
 
