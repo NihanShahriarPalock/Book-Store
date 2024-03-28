@@ -1,6 +1,6 @@
 # Book Store
 
-Visit the live site [here](https://b9a8-book-vibe-nihan-shahriar-palock.vercel.app/).
+Click to visit the live site [BookStore](https://b9a8-book-vibe-nihan-shahriar-palock.vercel.app/)
 
 
 ## Features and Characteristics
