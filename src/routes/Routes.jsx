@@ -47,10 +47,7 @@ export const router = createBrowserRouter([
         element: <PagesToRead></PagesToRead>,
       },
 
-      {
-        path: "/sorting",
-        element: <Sorting></Sorting>,
-      },
+     
       {
         path: "/contact",
         element: <ContactUs></ContactUs>,
