@@ -1,8 +1,12 @@
-# React + Vite
+# Book Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visit the live site [here](https://b9a8-book-vibe-nihan-shahriar-palock.vercel.app/).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features and Characteristics
+
+- **Extensive Book Collection**: Explore a vast collection of books covering various genres, authors, and topics.
+- **Bookmarks**: User can easily add books to Wishlists or Read option section.
+- **Search Functionality**: Easily find your favorite books using the search feature by title, name, author.
+- **User Reviews and Ratings**: Read reviews and ratings from other book lovers to help you decide on your next read.
+- **Sorting Functionality**: User can sort books to easily find out most hyped books.

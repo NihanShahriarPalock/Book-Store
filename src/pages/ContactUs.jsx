@@ -37,7 +37,7 @@ const ContactUs = () => {
                 </h2>
                
                 <p className='mt-2 text-sm text-blue-500 '>
-                  booklibrary@gmail.com
+                  bookstore@gmail.com
                 </p>
               </div>
 

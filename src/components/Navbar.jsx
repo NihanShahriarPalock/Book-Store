@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
           <button>
             <NavLink to='/' className='text-3xl font-bold text-[#131313] '>
-              Book Library
+              Book Store
             </NavLink>
           </button>
         </div>
